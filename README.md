@@ -120,44 +120,47 @@ crud-dd-task-mean-app/
 
 ---
 
-# ⚙ Docker Compose Deployment
+
+
+## Docker Compose Deployment
 
 Application deployed using:
 
-```bash
 docker compose up -d --build
+## Deployment Features
 
-Features:
+Multi-container architecture (Frontend + Backend + MongoDB)
 
-Multi-container setup
+Persistent MongoDB storage using Docker volumes
 
-Persistent MongoDB storage
-
-Restart policy enabled
+Docker restart policy enabled
 
 Internal Docker networking
 
-Proper port mapping
+Proper port mapping configuration
 
-☁ Cloud Infrastructure Setup
+## Cloud Infrastructure Setup
 
-Ubuntu 22.04 VM provisioned
+Production environment provisioned on:
 
-Docker & Docker Compose installed
+Ubuntu 22.04 Virtual Machine
+
+Docker installed
+
+Docker Compose installed
 
 UFW Firewall enabled
 
-Ports allowed:
-
-22 (SSH)
-
-80 (HTTP)
-
+## * Allowed Ports *
+Port	Purpose
+22	SSH Access
+80	HTTP Traffic (Nginx Reverse Proxy)
 CI/CD Pipeline – GitHub Actions
 
-Pipeline automatically runs on push to main branch.
+Pipeline automatically triggers on:
 
-Steps Performed:
+Push to main branch
+ Workflow Steps
 
 Checkout repository
 
@@ -171,11 +174,13 @@ Push images to Docker Hub
 
 SSH into Ubuntu VM
 
-Pull latest images
+Pull latest Docker images
 
 Restart containers using Docker Compose
 
-Secrets Used:
+## Secrets Management
+
+The following GitHub Secrets are securely configured:
 
 DOCKER_USERNAME
 
@@ -185,10 +190,10 @@ VM_HOST
 
 SSH_PRIVATE_KEY
 
-No credentials are hard-coded.
+✔ No credentials are hard-coded
+✔ Secure authentication enforced
 
-
-Nginx Reverse Proxy Configuration
+## Nginx Reverse Proxy Configuration
 
 Nginx configured to:
 
@@ -198,54 +203,50 @@ Route / → Frontend
 
 Route /api → Backend
 
-This ensures:
+## Benefits
 
 Clean routing
 
-Centralized traffic handling
+Centralized traffic management
 
 Production-style architecture
 
-** Security Configuration **
+Scalable deployment design
+
+## Security Configuration
 
 MongoDB not exposed publicly
 
-Firewall enabled
+Firewall (UFW) enabled
 
-SSH key authentication used
+SSH key-based authentication
 
-Environment variables used for database config
+Environment variables used for database configuration
 
 Docker restart policy enabled
 
-
+## Application Setup
 git clone discover-dollar-mean-devops-task
 cd crud-dd-task-mean-app
+docker compose up -d --build
+## Start Application
+<img width="1154" height="158" alt="Start Application" src="https://github.com/user-attachments/assets/7d1fa771-f71c-42f3-8063-1c632cdac3dc" />
+##  Verify Running Containers
+<img width="1672" height="137" alt="Running Containers" src="https://github.com/user-attachments/assets/49d49383-4860-4e6d-843e-e7984cdf011e" />
+##  Access Application
+http://localhost:8080/tutorials
+## Docker Hub Images
 
-# Start Application :
-<img width="1154" height="158" alt="image" src="https://github.com/user-attachments/assets/7d1fa771-f71c-42f3-8063-1c632cdac3dc" />
-
-# Verify Running Containers :
-<img width="1672" height="137" alt="image" src="https://github.com/user-attachments/assets/49d49383-4860-4e6d-843e-e7984cdf011e" />
-
-
-# Access Application --- >> "  http://localhost:8080/tutorials  "
-
-📦 Docker Hub Images :
 manojkumar2026/backend:latest
+
 manojkumar2026/frontend:latest
 
-<img width="1225" height="297" alt="image" src="https://github.com/user-attachments/assets/969edf79-648a-4fe1-9119-cc05245f8666" />
+🔗 Docker Hub Profile:
+https://hub.docker.com/u/manojkumar2026
 
-Docker Hub :   -->> "  https://hub.docker.com/u/manojkumar2026  "
-
-
-## GitHub Actions CI/CD Execution
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/6c8f44c8-99bd-4097-8e59-442d4ff2ece5" width="900"/>
-</p>
-
+<img width="1225" height="297" alt="Docker Hub Images" src="https://github.com/user-attachments/assets/969edf79-648a-4fe1-9119-cc05245f8666" />
+📊 GitHub Actions CI/CD Execution
+<p align="center"> <img src="https://github.com/user-attachments/assets/6c8f44c8-99bd-4097-8e59-442d4ff2ece5" width="900"/> </p>
 
 
 
