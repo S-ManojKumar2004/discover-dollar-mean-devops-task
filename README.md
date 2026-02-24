@@ -245,8 +245,12 @@ manojkumar2026/frontend:latest
 https://hub.docker.com/u/manojkumar2026
 
 <img width="1225" height="297" alt="Docker Hub Images" src="https://github.com/user-attachments/assets/969edf79-648a-4fe1-9119-cc05245f8666" />
-📊 GitHub Actions CI/CD Execution
+## GitHub Actions CI/CD Execution
 <p align="center"> <img src="https://github.com/user-attachments/assets/6c8f44c8-99bd-4097-8e59-442d4ff2ece5" width="900"/> </p>
+
+  Application Live URL : "  http://localhost:8080 "
+  <img width="1339" height="393" alt="image" src="https://github.com/user-attachments/assets/301d7910-82a8-46a3-ae05-e6d5d2d4bc8b" />
+
 
 
 
