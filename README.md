@@ -240,8 +240,11 @@ manojkumar2026/frontend:latest
 Docker Hub :   -->> "  https://hub.docker.com/u/manojkumar2026  "
 
 
- [gitHub Action]
-(img width="1850" height="619" alt="image" src="https://github.com/user-attachments/assets/6c8f44c8-99bd-4097-8e59-442d4ff2ece5" /)
+## GitHub Actions CI/CD Execution
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/6c8f44c8-99bd-4097-8e59-442d4ff2ece5" width="900"/>
+</p>
 
 
 
