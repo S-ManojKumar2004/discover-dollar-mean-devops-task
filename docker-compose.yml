@@ -1,21 +1,27 @@
-version: '3'
+version: "3"
 
 services:
   mongo:
-    image: mongo
-    ports:
-      - "27017:27017"
+    image: mongo:6
+    container_name: mongo
+    volumes:
+      - mongo-data:/data/db
 
   backend:
-    build: ./backend
+    image: manojkumar2026/backend:latest
+    container_name: backend
     ports:
-      - "8080:8080"
+      - "5000:5000"
     depends_on:
       - mongo
 
   frontend:
-    build: ./frontend
+    image: manojkumar2026/frontend:latest
+    container_name: frontend
     ports:
-      - "8081:80"
+      - "8080:80"
     depends_on:
       - backend
+
+volumes:
+  mongo-data:
